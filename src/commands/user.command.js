@@ -5,7 +5,7 @@ module.exports = {
     .setName('user')
     .setDescription('Provides information about the user.'),
   async execute(interaction) {
-    interaction.reply(
+    await interaction.reply(
       `I'm ${interaction.user.username} and I've been here since ${interaction.member.joinedAt}.`
     )
   }
