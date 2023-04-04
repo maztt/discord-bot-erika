@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/maztt/discord-bot-erika/issues"
   },
-  "homepage": "https://github.com/maztt/discord-bot-erika#readme"
+  "homepage": "https://github.com/maztt/discord-bot-erika#readme",
+  "dependencies": {
+    "discord.js": "^14.9.0"
+  }
 }
