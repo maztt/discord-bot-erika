@@ -1,0 +1,19 @@
+{
+  "name": "discord-bot-erika",
+  "version": "1.0.0",
+  "description": "Discord Bot to improve SouJunior's services and onboarding",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maztt/discord-bot-erika.git"
+  },
+  "author": "Júlio Mazotti || www.github.com/maztt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maztt/discord-bot-erika/issues"
+  },
+  "homepage": "https://github.com/maztt/discord-bot-erika#readme"
+}
