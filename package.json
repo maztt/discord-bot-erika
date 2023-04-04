@@ -18,5 +18,8 @@
   "homepage": "https://github.com/maztt/discord-bot-erika#readme",
   "dependencies": {
     "discord.js": "^14.9.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.37.0"
   }
 }
