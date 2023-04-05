@@ -1,4 +1,4 @@
-const { Client, Events, GatewayIntentBits, Collection } = require('discord.js')
+const { Client, GatewayIntentBits, Collection } = require('discord.js')
 const fs = require('node:fs')
 const path = require('node:path')
 
@@ -23,19 +23,5 @@ for (const file of commandFiles) {
     console.error(`The command at ${filePath} is missing a required "data" or "execute" property.`)
   }
 }
-
-client.on(Events.InteractionCreate, async interaction => {
-  if (!interaction.isChatInputCommand()) return  
-  const command = client.commands.get(interaction.commandName);
-  if (!command) {
-    console.error(`No command matching ${interaction.commandName} was found.`)
-    return
-  }
-  try {
-    await command.execute(interaction)
-  } catch (error) {
-    console.error(error)
-  }
-})
 
 client.login(TOKEN)
