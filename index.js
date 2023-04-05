@@ -20,7 +20,24 @@ for (const file of commandFiles) {
   if ('data' in command && 'execute' in command) {
     client.commands.set(command.data.name, command)
   } else {
-    console.error(`The command at ${filePath} is missing a required "data" or "execute" property.`)
+    console.error(
+      `The command at ${filePath} is missing a required "data" or "execute" property.`
+    )
+  }
+}
+
+const eventsPath = path.join(__dirname, 'src/events')
+const eventFiles = fs
+  .readdirSync(eventsPath)
+  .filter(file => file.endsWith('.js'))
+
+for (const file of eventFiles) {
+  const filePath = path.join(eventsPath, file)
+  const event = require(filePath)
+  if (event.once) {
+    client.once(event.name, (...args) => event.execute(...args))
+  } else {
+    client.on(event.name, (...args) => event.execute(...args))
   }
 }
 
